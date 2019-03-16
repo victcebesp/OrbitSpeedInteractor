@@ -1,7 +1,7 @@
 # Interacción gráfica con cámara
-Víctor Ceballos Espinosa
-
-## Introducción
+Víctor Ceballos Espinosa
+
+## Introducción
 
 Esta práctica consiste en hacer uso de bibliotecas de vídeo para interaccionar con una interfaz gráfica mediante dicha cámara. Es importante mencionar que Processing no incluye estas bibliotecas de vídeo, por lo que lo ha sido necesario añadirlas a través del menú de Herramientas. Para ser más específicos, he usado tres librerías en esta práctica:
 
@@ -11,9 +11,9 @@ Esta práctica consiste en hacer uso de bibliotecas de vídeo para interaccionar
 
 ## Objetivo
 
-Tras ver los ejemplos propuestos en la galería, decidí implementar una especia de sistema solar reducido en el que sólo existe un planeta y un satélite. Este satélite órbita alrededor del planeta a una velocidad constante. Sin embargo, dependiendo de la cantidad de movimiento que haya en frente de la pantalla, el satélite orbitará a más o menos velocidad. A más movimiento, más velocidad y a menos movimiento, menos velocidad.
+Tras ver los ejemplos propuestos en la galería, decidí implementar una especia de sistema solar reducido en el que sólo existe un planeta y un satélite. Este satélite orbita alrededor del planeta a una velocidad constante. Sin embargo, dependiendo de la cantidad de movimiento que haya en frente de la pantalla, el satélite orbitará a más o menos velocidad. A más movimiento, más velocidad y a menos movimiento, menos velocidad.
 
-## Implementación
+## Implementación
 
 Para implementar el objetivo descrito en el anterior apartado, he decidido hacer uso del ejemplo p6_camdiff. En este ejemplo, inicialmente se disponen dos imágenes, a la izquierda la imagen actual en frente de la cámara en color, a la derecha, la diferencia en blanco y negro entre dos imágenes consecutivas.
 
