@@ -5,11 +5,14 @@ import org.opencv.imgproc.Imgproc;
 import peasy.*;
 
 Capture faceCam;
+import java.text.DecimalFormat;
+
 CVImage img, pimg, auximg;
 long previousMean = 0, spinSpeed = 0;
 float speed = 0;
 CelestialBody celestialBody;
 PeasyCam cam;
+DecimalFormat decimalFormat;
 
 void setup() {
   size(1280, 480, P3D);
@@ -17,7 +20,7 @@ void setup() {
   faceCam = new Capture(this, width/2, height);
   faceCam.start();
   cam = new PeasyCam(this, 500);
-
+  cam.setActive(false);
   //OpenCV
   //Carga biblioteca core de OpenCV
   System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
@@ -26,6 +29,7 @@ void setup() {
   auximg=new CVImage(faceCam.width, faceCam.height);
   celestialBody = new CelestialBody(50, 0, 0);
   celestialBody.spawnMoon();
+  decimalFormat = new DecimalFormat("#.##");
 }
 
 void draw() {  
@@ -59,10 +63,11 @@ void draw() {
     
     pushStyle();
     fill(255, 0, 0);
-    textSize(20);
-    text("Current speed: " + (0.05 + speed), -60, 140);
+    textSize(25);
+    text("Current speed: " + decimalFormat.format(0.05 + speed), -100, 140);
     fill(255, 255, 255);
-    text("Current speed: " + (0.05 + speed), -60, 140);
+    textSize(20);
+    text("Increase the movement in front of the camera to move faster the satellite", -width/4, 160);
     popStyle();
     
     //Copia de Mat a CVImage
