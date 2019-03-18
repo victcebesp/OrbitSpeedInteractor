@@ -54,13 +54,15 @@ void draw() {
     }
     
     mean = mean / gris.total();
-    speed = radians(abs((previousMean - mean) / 2));
+    speed = radians(abs((previousMean - mean)));
     previousMean = mean;
-    println(radians(speed));
     
     pushStyle();
-    color(255, 0, 0);
-    text("Current speed: " + 0.05 + speed, 100, height - 30);
+    fill(255, 0, 0);
+    textSize(20);
+    text("Current speed: " + (0.05 + speed), -60, 140);
+    fill(255, 255, 255);
+    text("Current speed: " + (0.05 + speed), -60, 140);
     popStyle();
     
     //Copia de Mat a CVImage
